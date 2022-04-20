@@ -6,49 +6,51 @@ const Schema = mongoose.Schema;
  */
 let VehicleSchema = new Schema({
   /**
-    * Schema to describe a vehicle.
+    * the brand name of the vehicle.
     */
   make: {
     type: String
   },
   /**
-    * Schema to describe a vehicle.
+    * the model name of the vehicle.
     */
   model: {
     type: String
   },
   /**
-    * Schema to describe a vehicle.
+    * year the vehicle was made.
     */
   model_year: {
     type: Number
   },
   /**
-    * Schema to describe a vehicle.
+    * miles per gallon/range (for EVs).
     */
   mpg: {
-    type: Number
+    value: {type: Number},
+    unit: {type: String, default: "mi"}
   },
   /**
-    * Schema to describe a vehicle.
+    * how many miles vehicle has driven total.
     */
   odometer_mi: {
-    type: Number
+    value: {type: Number},
+    unit: {type: String, default: "mi"}
   },
   /**
-    * Schema to describe a vehicle.
+    * type of engine vehicle uses.
     */
   engine: {
     type: String
   },
   /**
-    * Schema to describe a vehicle.
+    * vehicle's display name. 
     */
   display_name: {
     type: String
   },
   /**
-    * Schema to describe a vehicle.
+    * Vehicle's unique alphanumeric identifier.
     */
   vin: {
     type: String
